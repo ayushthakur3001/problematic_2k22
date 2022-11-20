@@ -1,13 +1,66 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  font-family: 'Archivo Black', sans-serif;
+  /* overflow: hidden; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown {
+  font-size: 30px;
+}
+
+span {
+  font-size: 30px;
+  color: #1976D2;
+}
+
+.puzzle-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* overflow-x: hidden; */
+}
+
+.puzzle-container .container {
+  height: 100%;
+  width: 70%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* position: relative; */
+  overflow: hidden;
+  /* background-color: yellow; */
+}
+
+.puzzle-container .container .prob-container {
+  background: url('./assets/loading.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+.prob-container::-webkit-scrollbar {
+  display: none;
 }
